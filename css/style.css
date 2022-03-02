@@ -385,8 +385,17 @@ section .section__content .section__content-text blockquote p {
 }
 
 section .section__content .section__content-text blockquote:before {
-  color: #ccc;
+  color: var(--color-orange-d);
   content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+section .section__content .section__content-text blockquote:after {
+  color: var(--color-orange-d);
+  content: close-quote;
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
