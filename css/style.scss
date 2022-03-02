@@ -82,6 +82,27 @@ p {
 .p__upper {
   text-transform: uppercase;
 }
+
+.ul__custom {
+  margin-left: 1rem;
+  // list-style: none;
+
+  li {
+    list-style: none;
+    margin-left: 1.5rem;
+    // list-style-type: disc;
+  }
+  li::before {
+    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--color-orange); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+    list-style: none;
+  }
+}
+
 .headtext__cormorant {
   font-family: var(--font-base);
   color: var(--color-golden);
@@ -193,8 +214,9 @@ p {
 
 .hero {
   //   background: url("https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80")
-  background: url("../assets/subpage-bg.png") no-repeat;
+  background: url("../assets/wipp-site-50.png") no-repeat;
   background-size: cover;
+  background-position: center;
   height: 40vh;
   color: black;
   display: flex;
@@ -266,9 +288,8 @@ p {
     padding: 0 1rem;
     gap: 0;
   }
-  .hero__img,
-  .hero__img img {
-    display: none;
+  .hero__img {
+    // width: 100%;
   }
   .hero .hero__text {
     font-size: 3rem;
@@ -295,9 +316,8 @@ p {
     margin-top: 2rem;
     font-weight: 900;
   }
-  .hero__img,
-  .hero__img img {
-    display: none;
+  .hero__img {
+    width: 100%;
   }
 }
 
@@ -325,6 +345,26 @@ section {
       // margin: 0 0 3rem 2rem;
     }
 
+    .section__content-text blockquote {
+      background: var(--color-white);
+      border-left: 10px solid var(--color-orange);
+      margin: 0 50px 2rem 50px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+
+      p {
+        display: inline;
+      }
+    }
+    .section__content-text blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+
     .section__content-img {
       display: flex;
       flex-direction: column;
@@ -333,13 +373,16 @@ section {
       .section__content-img-holder {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
         justify-content: center;
         align-items: center;
-
+        padding: 0 3rem;
         img {
-          width: 25%;
+          // width: auto;
+          max-height: 100px;
 
-          height: 100%;
+          // height: 100px;
         }
       }
     }
@@ -440,7 +483,7 @@ section {
 }
 
 .subpage__keypersonnel_card {
-  max-width: 162px;
+  max-width: 160px;
 }
 
 // @media screen and (max-width: 600px) {
