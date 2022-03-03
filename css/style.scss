@@ -29,9 +29,16 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 p {
   padding-bottom: 1rem;
 }
+
 .app__header-h1 {
   font-family: var(--font-base);
   // color: var(--color-black);
@@ -82,7 +89,16 @@ p {
 .p__upper {
   text-transform: uppercase;
 }
-
+.text-link {
+  color: var(--color-orange-d);
+  border-bottom: rgba(255, 255, 255, 0) solid 1px;
+}
+.text-link:hover {
+  color: (var(--color-orange));
+  text-decoration: none;
+  transition: 0.5s ease;
+  border-bottom: var(--color-orange) solid 1px;
+}
 .ul__custom {
   margin-left: 1rem;
   // list-style: none;
@@ -384,11 +400,11 @@ section {
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         padding: 0 3rem;
         img {
           // width: auto;
-          max-height: 100px;
+          // max-height: 100px;
 
           // height: 100px;
         }
@@ -401,6 +417,12 @@ section {
   section .section__content {
     width: 100%;
     padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section .section__content .section__content-text blockquote {
+    margin: 0 0 2rem 0;
   }
 }
 
@@ -466,7 +488,14 @@ section {
     flex: 50%;
   }
 }
-
+.section__content-about-banner {
+  position: relative;
+  // height: 50px;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (max-width: 840px) {
   .section__content-about {
     flex-direction: column;
