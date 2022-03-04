@@ -911,8 +911,8 @@ section .section__content .section__content-img .section__content-img-holder {
 
 .fa-graduation-cap,
 .fa-money-check-dollar,
-.fa-house-user,
-.fa-briefcase {
+.fa-briefcase,
+.fa-handshake-angle {
   color: var(--color-green);
 }
 /*# sourceMappingURL=style.css.map */
