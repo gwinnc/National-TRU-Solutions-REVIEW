@@ -140,6 +140,8 @@ p {
 }
 .topnav {
   overflow: hidden;
+  display: flex;
+  align-content: stretch;
   // background-color: var(--color-grey);
   background-image: linear-gradient(
     90deg,
@@ -153,11 +155,15 @@ p {
 .topnav a {
   float: left;
   display: block;
+  display: flex;
+  align-items: center;
+  height: 72px;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1rem;
+  // font-size: 0.7rem;
 }
 
 .topnav a:hover {
@@ -196,7 +202,11 @@ p {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 880px) {
+  .topnav {
+    display: block;
+    
+  }
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -206,9 +216,10 @@ p {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 880px) {
   .topnav.responsive {
-    position: absolute;
+    // display: inline;
+    // position: absolute;
     height: 100vh;
     width: 100%;
     top: 0;
